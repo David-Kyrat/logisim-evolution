@@ -31,8 +31,8 @@ public class ImportTableButton extends JButton {
 
   ImportTableButton(JFrame parent, AnalyzerModel model) {
     this.parent = parent;
-    this.model = model;
-    addActionListener(event -> doLoad());
+    this.model = null;//model;
+    //addActionListener(event -> doLoad());
   }
 
   void localeChanged() {

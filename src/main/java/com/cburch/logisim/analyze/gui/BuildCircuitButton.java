@@ -235,8 +235,8 @@ class BuildCircuitButton extends JButton {
   BuildCircuitButton(JFrame parent, AnalyzerModel model) {
     super();
     this.parent = parent;
-    this.model = model;
-    addActionListener(myListener);
+    this.model = null;//model;
+    //addActionListener(myListener);
   }
 
   void localeChanged() {
