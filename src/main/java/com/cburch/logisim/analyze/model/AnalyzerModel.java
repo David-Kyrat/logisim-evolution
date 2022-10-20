@@ -14,8 +14,8 @@ import com.cburch.logisim.proj.Project;
 import java.util.List;
 
 public class AnalyzerModel {
-  public static final int MAX_INPUTS = 0;
-  public static final int MAX_OUTPUTS = 0;
+  public static final int MAX_INPUTS = 20;
+  public static final int MAX_OUTPUTS = 360;
 
   public static final int FORMAT_SUM_OF_PRODUCTS = 0;
   public static final int FORMAT_PRODUCT_OF_SUMS = 1;

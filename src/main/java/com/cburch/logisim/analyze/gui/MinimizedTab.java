@@ -90,7 +90,7 @@ class MinimizedTab extends AnalyzerTab {
 
     @Override
     public Object getSelectedItem() {
-      return choices[selected];
+      return null;//choices[selected];
     }
 
     @Override
@@ -279,11 +279,11 @@ class MinimizedTab extends AnalyzerTab {
   public MinimizedTab(AnalyzerModel model, LogisimMenuBar menubar) {
     this.model = model;
     this.outputExprs = model.getOutputExpressions();
-    outputExprs.addOutputExpressionsListener(myListener);
+    //outputExprs.addOutputExpressionsListener(myListener);
 
     selector = new OutputSelector(model);
     selector.addItemListener(myListener);
-    karnaughMap = new KarnaughMapPanel(model, minimizedExpr);
+    karnaughMap = new KarnaughMapPanel(new AnalyzerModel(), new ExpressionView());
     setAsExpr.addActionListener(myListener);
     formatChoice.addItemListener(myListener);
     formatStyle.addItemListener(myListener);
