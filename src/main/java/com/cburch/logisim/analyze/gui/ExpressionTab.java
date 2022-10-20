@@ -90,12 +90,12 @@ class ExpressionTab extends AnalyzerTab {
 
     @Override
     public void fireTableChanged(TableModelEvent event) {
-      TableModelListener listener;
+      /*TableModelListener listener;
       final var list = listenerList.getListenerList();
       for (var index = 0; index < list.length; index += 2) {
-        listener = (TableModelListener) list[index + 1];
-        listener.tableChanged(event);
-      }
+        //listener = (TableModelListener) list[index + 1];
+        //listener.tableChanged(event);
+      }*/
     }
 
     @Override
