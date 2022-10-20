@@ -277,7 +277,8 @@ class MinimizedTab extends AnalyzerTab {
   private final OutputExpressions outputExprs;
 
   public MinimizedTab(AnalyzerModel model, LogisimMenuBar menubar) {
-    this.model = model;
+    //this.model = model;
+    this.model = null;
     this.outputExprs = model.getOutputExpressions();
     //outputExprs.addOutputExpressionsListener(myListener);
 
@@ -536,7 +537,7 @@ class MinimizedTab extends AnalyzerTab {
 
     @Override
     protected Transferable createTransferable(JComponent c) {
-      return new ExpressionSelection(minimizedExpr.getRenderData());
+      return null; //new ExpressionSelection(minimizedExpr.getRenderData());
     }
   }
 
@@ -548,7 +549,7 @@ class MinimizedTab extends AnalyzerTab {
     }
 
     public void setImage(Image image) {
-      this.image = image;
+      this.image = null; //image;
     }
 
     @Override
@@ -557,8 +558,7 @@ class MinimizedTab extends AnalyzerTab {
     }
 
     @Override
-    public boolean isDataFlavorSupported(DataFlavor flavor) {
-      return DataFlavor.imageFlavor.equals(flavor);
+    public boolean isDataFlavorSupported(DataFlavor flavor) { return false && DataFlavor.imageFlavor.equals(flavor);
     }
 
     @Override
@@ -566,7 +566,8 @@ class MinimizedTab extends AnalyzerTab {
       if (!DataFlavor.imageFlavor.equals(flavor)) {
         throw new UnsupportedFlavorException(flavor);
       }
-      return image;
+      //return image;
+      return null;
     }
   }
 

@@ -84,8 +84,8 @@ class ExpressionTab extends AnalyzerTab {
 
     public ExpressionTableModel() {
       updateCopy();
-      model.getOutputs().addVariableListListener(this);
-      model.getOutputExpressions().addOutputExpressionsListener(this);
+      /*model.getOutputs().addVariableListListener(this);
+      model.getOutputExpressions().addOutputExpressionsListener(this);*/
     }
 
     @Override
@@ -140,6 +140,7 @@ class ExpressionTab extends AnalyzerTab {
     @Override
     public void expressionChanged(OutputExpressionsEvent event) {
       if (event.getType() == OutputExpressionsEvent.OUTPUT_EXPRESSION) {
+/*
         final var name = event.getVariable();
         int idx = -1;
         for (final var e : listCopy) {
@@ -156,11 +157,13 @@ class ExpressionTab extends AnalyzerTab {
             break;
           }
         }
+*/
       }
     }
 
     @Override
     public void listChanged(VariableListEvent event) {
+/*
       updateCopy();
       final var idx = event.getIndex();
       switch (event.getType()) {
@@ -184,11 +187,12 @@ class ExpressionTab extends AnalyzerTab {
           // none
         }
       }
+*/
     }
 
     void update() {
-      updateCopy();
-      fireTableDataChanged();
+      //updateCopy();
+      //fireTableDataChanged();
     }
 
     void updateCopy() {
@@ -242,10 +246,10 @@ class ExpressionTab extends AnalyzerTab {
     NamedExpression newExpr;
 
     public ExpressionEditor() {
-      field.setBorder(
+      /*field.setBorder(
           BorderFactory.createCompoundBorder(
               field.getBorder(), BorderFactory.createEmptyBorder(1, 3, 1, 3)));
-      BuddySupport.addLeft(label, field);
+      BuddySupport.addLeft(label, field);*/
     }
 
     @Override
